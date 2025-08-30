@@ -7,10 +7,10 @@ async def robot_style():
     <style>
         /* Base */
         :root{
-            --card-w: 400px;
-            --card-h: 300px;
+            --card-w: 51vh;
+            --card-h: 19vw;
             --cards-gap: 40px;
-            --canvas-h: 800px; 
+            --canvas-h: 102vh; 
             --blue:#25A6E9;
             --ink:#EBF0F3;
             --glass-bg: rgba(255,255,255,0.06);
@@ -139,8 +139,8 @@ async def robot_style():
             left:50%;
             top:50%;
             transform:translate(-50%,-50%);
-            width:600px;
-            height:700px;
+            width:60vw;
+            height:86vh;
             object-fit:contain;
             z-index:10;
             filter: drop-shadow(0 20px 60px rgba(0,0,0,0.6));
