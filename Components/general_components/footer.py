@@ -1,6 +1,3 @@
-from fastapi import APIRouter
-from fastapi.responses import HTMLResponse
-
 async def footer_body():
     return """
         <footer class="footer-container">
@@ -9,9 +6,18 @@ async def footer_body():
             <!-- As requested, here is a dummy image for the logo -->
             <img src="../../Resources/Images/silver_logo.png" alt="Decisionalgo Logo" class="logo">
             <div class="social-links">
-                <a href="#"><span>Instagram</span><span>&rarr;</span></a>
-                <a href="#"><span>Facebook</span><span>&rarr;</span></a>
-                <a href="#"><span>YouTube</span><span>&rarr;</span></a>
+                <a href="#"><span>Instagram</span><span><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.75 12.5L20.25 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 5.75V5.75C14.6595 8.55205 16.8074 10.8309 19.5361 12.1538L20.25 12.5L19.1908 13.0777C16.6674 14.4542 14.6674 16.6233 13.5 19.25V19.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span></a>
+                                    <a href="#"><span>Facebook</span><span><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.75 12.5L20.25 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 5.75V5.75C14.6595 8.55205 16.8074 10.8309 19.5361 12.1538L20.25 12.5L19.1908 13.0777C16.6674 14.4542 14.6674 16.6233 13.5 19.25V19.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span></a>
+                                    <a href="#"><span>YouTube</span><span><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/200/svg">
+                    <path d="M3.75 12.5L20.25 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 5.75V5.75C14.6595 8.55205 16.8074 10.8309 19.5361 12.1538L20.25 12.5L19.1908 13.0777C16.6674 14.4542 14.6674 16.6233 13.5 19.25V19.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span></a>
             </div>
         </div>
 
@@ -72,13 +78,13 @@ async def footer_style():
 
         /* Footer Container */
         .footer-container {
-            margin-top:15rem;
             background: linear-gradient(293.29deg, #090909 0.66%, rgba(37, 37, 37, 0.85) 27.54%, rgba(84, 84, 84, 0.62) 72.03%);
             padding: 60px 80px;
             display: flex;
             flex-direction: column;
             gap: 60px;
             border-radius: 55px 55px 0 0;
+            color: #ffffff;
         }
 
         /* Top Section: Logo and Social Links */
@@ -88,12 +94,12 @@ async def footer_style():
             align-items: center;
             flex-wrap: wrap;
             gap: 40px;
-            padding-left:7rem;
+            padding-left: 7rem;
         }
 
         .logo {
-            max-width: 1107px;
-            height: 239;
+            max-width: 500px; /* Adjusted from vw for stability */
+            height: auto;
             object-fit: contain;
         }
 
@@ -101,23 +107,22 @@ async def footer_style():
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding-right:10rem;
+            padding-right: 10rem;
         }
 
         .social-links a {
-            font-size: 24px;
+            font-size: 1.25rem; /* 20px */
             font-weight: 400;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 170px; /* Helps align the arrows */
+            width: 170px;
             transition: opacity 0.3s ease;
             opacity: 0.7;
         }
         .social-links a:hover {
             opacity: 1;
         }
-
 
         /* Middle Section: Link Columns */
         .footer-middle {
@@ -129,19 +134,19 @@ async def footer_style():
         .link-column{
             padding-left: 3rem;
         }
+        
         .link-column h3 {
-            font-size: 32px;
+            font-size: 1.75rem; /* 28px */
             font-weight: 600;
             margin: 0 0 15px 0;
             background: linear-gradient(90.01deg, #EBF3F3 16.31%, #EBF3F3 94.45%);
             -webkit-background-clip: text;
-            -moz-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
         .link-column ul li {
-            font-size: 18px;
+            font-size: 1rem; /* 16px */
             font-weight: 400;
             opacity: 0.7;
             line-height: 1.6;
@@ -151,7 +156,6 @@ async def footer_style():
              content: "• ";
              opacity: 0.8;
         }
-
 
         /* Bottom Section: Separator and Credits */
         .footer-bottom {
@@ -177,86 +181,85 @@ async def footer_style():
         }
 
         .copyright {
-            font-size: 28px;
+            font-size: 1.5rem; /* 24px */
             font-weight: 700;
             margin: 0;
             background: linear-gradient(90.01deg, rgba(235, 243, 243, 0.3) 0.01%, #EBF3F3 18.63%, #EBF3F3 65.13%, rgba(235, 243, 243, 0.3) 94.45%);
             -webkit-background-clip: text;
-            -moz-background-clip: text;
             background-clip: text;
             color: transparent;
-            padding-left:4rem;
+            padding-left: 4rem;
         }
 
         .partner {
-            font-size: 24px;
+            font-size: 1.25rem; /* 20px */
             font-weight: 400;
             margin: 0;
             opacity: 0.9;
-            padding-right:4rem;
+            padding-right: 4rem;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 1200px) {
-            .logo {
-                max-width: 450px;
-            }
-            .copyright {
-                font-size: 24px;
-            }
-            .partner {
-                font-size: 20px;
-            }
-        }
-        
+        /* --- MOBILE RESPONSIVE STYLES --- */
         @media (max-width: 992px) {
             .footer-container {
                 padding: 50px 40px;
             }
-            .footer-top {
-                flex-direction: column;
-                align-items: flex-start;
+            .footer-top, .link-column, .copyright, .partner {
+                padding-left: 0;
+                padding-right: 0;
             }
         }
-
+        
         @media (max-width: 768px) {
+            .footer-container {
+                padding: 40px 24px;
+                gap: 40px;
+                border-radius: 40px 40px 0 0;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .logo {
+                max-width: 280px;
+            }
+
+            .social-links {
+                align-items: center;
+            }
+            .social-links a {
+                font-size: 1.1rem; /* 18px */
+                gap: 2.67vw;
+            }
+
             .footer-middle {
                 flex-direction: column;
                 gap: 40px;
             }
+
+            .link-column h3 {
+                font-size: 1.5rem; /* 24px */
+            }
+            .link-column ul li {
+                font-size: 0.95rem; /* 15px */
+            }
+
             .bottom-content {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 gap: 15px;
+                text-align: center;
             }
+
             .copyright {
-                font-size: 20px;
+                font-size: 1.2rem; /* 19px */
             }
             .partner {
-                font-size: 18px;
+                font-size: 1rem; /* 16px */
             }
-        }
-        
-        @media (max-width: 576px) {
-            .logo {
-                max-width: 100%;
-            }
-             .copyright {
-                font-size: 18px;
-            }
-            .partner {
-                font-size: 16px;
-            }
-            .social-links a {
-                font-size: 20px;
-            }
-            .link-column h3 {
-                font-size: 28px;
-            }
-             .link-column ul li {
-                font-size: 16px;
-             }
         }
     </style>
     """
-    

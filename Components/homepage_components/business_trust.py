@@ -3,74 +3,78 @@ async def trust_body():
   <section class="trust-section" aria-label="Why Businesses Trust Us">
     <div class="top-fade" aria-hidden="true"></div>
 
-    <!-- CTAs -->
-    <div class="cta-row">
-      <a href="#" class="btn primary">See Our Dashboards</a>
-      <a href="#" class="btn ghost">Explore More Solutions</a>
-    </div>
+    <!-- This wrapper helps reorder content on mobile using CSS flexbox's 'order' property -->
+    <div class="trust-section-content-wrapper">
 
-    <!-- Title -->
-    <h2 class="title">
-      Why <span class="accent">Businesses</span> Trust Us
-    </h2>
+      <!-- CTAs -->
+      <div class="cta-row">
+        <a href="#" class="btn primary">See Our Dashboards</a>
+        <a href="#" class="btn ghost">Explore More Solutions</a>
+      </div>
 
-    <!-- Layered frames -->
-    <div class="frame-outline" aria-hidden="true"></div>
+      <!-- Title -->
+      <h2 class="title">
+        Why <span class="accent">Businesses</span> Trust Us
+      </h2>
 
-    <!-- Main panel -->
-    <div class="panel">
-      <div class="features">
-      <div class="feature-text-box">
-        <!-- Feature 1 -->
-        <div class="feature f1">
-          <div class="icon"></div>
-          <div class="feature-content">
-            <h3>Tailored AI & Data Solutions</h3>
-            <p>We create custom automation & insights for your specific business challenges.</p>
-          </div>
-        </div>
+      <!-- Layered frames -->
+      <div class="frame-outline" aria-hidden="true"></div>
 
-        <!-- Feature 2 -->
-        <div class="feature f2">
-          <div class="icon"></div>
-          <div class="feature-content">
-            <h3>Built to Scale</h3>
-            <p>Whether you’re a startup or an enterprise, our solutions grow with your needs.</p>
-          </div>
-        </div>
+      <!-- Main panel -->
+      <div class="panel">
+        <div class="features">
+          <div class="feature-text-box">
+            <!-- Feature 1 -->
+            <div class="feature f1">
+              <div class="icon"></div>
+              <div class="feature-content">
+                <h3>Tailored AI & Data Solutions</h3>
+                <p>We create custom automation & insights for your specific business challenges.</p>
+              </div>
+            </div>
 
-        <!-- Feature 3 -->
-        <div class="feature f3">
-          <div class="icon"></div>
-          <div class="feature-content">
-            <h3>Cost-Efficient Automation</h3>
-            <p>Save resources by reducing manual tasks with smart automation.</p>
-          </div>
-        </div>
+            <!-- Feature 2 -->
+            <div class="feature f2">
+              <div class="icon"></div>
+              <div class="feature-content">
+                <h3>Built to Scale</h3>
+                <p>Whether you’re a startup or an enterprise, our solutions grow with your needs.</p>
+              </div>
+            </div>
 
-        <!-- Feature 4 -->
-        <div class="feature f4">
-          <div class="icon"></div>
-          <div class="feature-content">
-            <h3>Ironclad Security</h3>
-            <p>Your data is protected with enterprise-grade security & compliance.</p>
-          </div>
-        </div>
+            <!-- Feature 3 -->
+            <div class="feature f3">
+              <div class="icon"></div>
+              <div class="feature-content">
+                <h3>Cost-Efficient Automation</h3>
+                <p>Save resources by reducing manual tasks with smart automation.</p>
+              </div>
+            </div>
 
-        <!-- Feature 5 -->
-        <div class="feature f5">
-          <div class="icon"></div>
-          <div class="feature-content">
-            <h3>Proven Results </h3>
-            <p>Our client see higher efficiency, smarter decisions, and business growth.</p>
+            <!-- Feature 4 -->
+            <div class="feature f4">
+              <div class="icon"></div>
+              <div class="feature-content">
+                <h3>Ironclad Security</h3>
+                <p>Your data is protected with enterprise-grade security & compliance.</p>
+              </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature f5">
+              <div class="icon"></div>
+              <div class="feature-content">
+                <h3>Proven Results </h3>
+                <p>Our client see higher efficiency, smarter decisions, and business growth.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-    </div>
+
+    </div> <!-- End of content-wrapper -->
   </section>
 """
-
 
 async def trust_style():
     return """  
@@ -92,33 +96,33 @@ async def trust_style():
     .trust-section {
       position: relative;
       width: 100%;
-      min-width: 1474px;
-      padding: 100px 0 160px; /* Adjusted top padding */
+      min-width: 76.77vw; /* Original: 1474px */
+      padding: 9.26vh 0 14.81vh; /* Original: 100px 0 160px */
     }
 
     /* CTAs row */
     .cta-row {
       position: relative;
-      width: auto; /* Let flexbox determine width */
+      width: auto; 
       left: 50%;
       transform: translateX(-50%);
       top: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 43px;
+      gap: 2.24vw; /* Original: 43px */
     }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 43px;
-      padding: 11px 35px; /* Adjusted horizontal padding */
-      border-radius: 24px;
-      border: 1px solid #DFDFDF;
+      height: 3.98vh; /* Original: 43px */
+      padding: 1.02vh 1.82vw; /* Original: 11px 35px */
+      border-radius: 1.25vw; /* Original: 24px */
+      border: 0.05vw solid #DFDFDF; /* Original: 1px */
       font-family: "Poppins", system-ui, Arial, sans-serif;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 0.83vw; /* Original: 16px */
       line-height: 1.33;
       white-space: nowrap;
       cursor: pointer;
@@ -127,7 +131,7 @@ async def trust_style():
     .btn.primary {
       background: #FFFFFF;
       color: #000000;
-      padding: 11px 45px; /* Custom padding for this button */
+      padding: 1.02vh 2.34vw; /* Original: 11px 45px */
     }
     .btn.ghost {
       background: transparent;
@@ -137,14 +141,14 @@ async def trust_style():
     /* Heading */
     .title {
       position: relative;
-      width: 916px;
+      width: 47.7vw; /* Original: 916px */
       height: auto;
       left: 50%;
       transform: translateX(-50%);
-      margin-top: 80px; /* Increased margin */
+      margin-top: 7.41vh; /* Original: 80px */
       font-weight: 700;
-      font-size: 64px;
-      line-height: 77px;
+      font-size: 3.33vw; /* Original: 64px */
+      line-height: 4.01vw; /* Original: 77px */
       text-align: center;
       letter-spacing: -0.02em;
       background: linear-gradient(90deg,
@@ -164,26 +168,26 @@ async def trust_style():
 
     /* Layered frames behind the features panel */
     .frame-outline {
-      margin-top:5rem;
+      margin-top: 7.41vh; /* Original: 5rem */
       position: absolute;
-      width: 1405px;
-      height: 736px;
+      width: 73.18vw; /* Original: 1405px */
+      height: 68.15vh; /* Original: 736px */
       left: 50%;
       transform: translateX(-50%);
-      top: 280px;
-      border: 1px solid rgba(255, 255, 255, 255);
+      top: 25.93vh; /* Original: 280px */
+      border: 0.05vw solid rgba(255, 255, 255, 255); /* Original: 1px */
       border-bottom: none;
-      border-radius: 65px;
+      border-radius: 3.38vw; /* Original: 65px */
     }
     .panel {
       position: relative;
-      width: 1474px;
-      height: 706px;
+      width: 76.77vw; /* Original: 1474px */
+      height: 65.37vh; /* Original: 706px */
       left: 50%;
       transform: translateX(-50%);
-      margin-top: 100px;
+      margin-top: 9.26vh; /* Original: 100px */
       background: #181818;
-      border-radius: 28px;
+      border-radius: 1.46vw; /* Original: 28px */
       overflow: hidden;
     }
 
@@ -195,23 +199,23 @@ async def trust_style():
     }
     
     .feature-text-box{
-          padding: 10rem 3rem;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 70px;
-          justify-content: space-evenly;
-        }
-        
-        .feature {
-          color: #FFFFFF;
-          display: flex;
-          align-items: flex-start;
-          gap: 25px;
-        }
+      padding: 14.81vh 2.5vw; /* Original: 10rem 3rem */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.65vw; /* Original: 70px */
+      justify-content: space-evenly;
+    }
+    
+    .feature {
+      color: #FFFFFF;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.3vw; /* Original: 25px */
+    }
     .feature .icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 5px;
+      width: 2.6vw; /* Original: 50px */
+      height: 2.6vw; /* Original: 50px, using vw to maintain aspect ratio */
+      border-radius: 0.26vw; /* Original: 5px */
       background: #FFFFFF;
       display: flex;
       align-items: center;
@@ -219,87 +223,175 @@ async def trust_style():
       overflow: hidden;
       flex-shrink: 0;
     }
-    /* NOTE: Replaced placeholder icons with SVGs */
     .feature .icon {
-      background-size: 32px 32px;
+      background-size: 1.67vw 1.67vw; /* Original: 32px 32px */
       background-position: center;
       background-repeat: no-repeat;
     }
-    .f1 .icon {
-      background-image: url("/Resources/Images/tailoredAi.png");
-    }
-    .f2 .icon {
-    background-image: url("/Resources/Images/buildToScale.png");
-    }
-    .f3 .icon {
-    background-image: url("/Resources/Images/costEfficient.png");
-    }
-    .f4 .icon {
-      background-image: url("/Resources/Images/ironCladSecurity.png");
-    }
-    .f5 .icon {
-      background-image: url("/Resources/Images/provenResult.png");
-    }
+    .f1 .icon { background-image: url("/Resources/Images/tailoredAi.png"); }
+    .f2 .icon { background-image: url("/Resources/Images/buildToScale.png"); }
+    .f3 .icon { background-image: url("/Resources/Images/costEfficient.png"); }
+    .f4 .icon { background-image: url("/Resources/Images/ironCladSecurity.png"); }
+    .f5 .icon { background-image: url("/Resources/Images/provenResult.png"); }
+
     .feature-content {
       /* This is a container for the text content */
     }
     .feature h3 {
-      margin: 0px;
-      position: flex;
-      width: 264.02px;
-      height: 58px;
+      margin: 0;
+      width: 13.75vw; /* Original: 264.02px */
+      height: 5.37vh; /* Original: 58px */
       font-family: 'Exo 2';
       font-style: normal;
       font-weight: 400;
-      font-size: 29.2104px;
-      /* or 29px */
-
+      font-size: 1.52vw; /* Original: 29.2104px */
       color: #FFFFFF;
     }
-    /* Tailored AI & Data Solutions */
-
-
-
-
     .feature p {
       margin: 0;
-      width: 301.09px;
-      height: 66px;
+      width: 15.68vw; /* Original: 301.09px */
+      height: 6.11vh; /* Original: 66px */
       font-family: 'Exo 2';
       font-style: normal;
-      font-size: 17.9756px;
-      line-height: 22px;
+      font-size: 0.94vw; /* Original: 17.9756px */
+      line-height: 2.04vh; /* Original: 22px */
       color: #FFFFFF;
       opacity: 0.7;
-      }
+    }
 
     /* Utility (demo background gradient at top like the screenshot) */
     .top-fade {
       position: absolute;
       inset: 0 0 auto 0;
-      height: 220px;
+      height: 20.37vh; /* Original: 220px */
       background: radial-gradient(80% 100% at 50% 0%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
       pointer-events: none;
     }
-    .f1{
-      width: 392px;
-      height: 150px;
+    .f1, .f2, .f3, .f4, .f5 {
+      width: 20.42vw; /* Original: 392px */
+      height: 13.89vh; /* Original: 150px */
     }
-    f2{
-      width: 392px;
-      height: 150px;
+
+    /******************************************/
+    /*           MOBILE STYLES                */
+    /******************************************/
+    @media (max-width: 768px) {
+        .trust-section {
+            padding: 4rem 1rem 3rem;
+            min-width: initial; /* Reset min-width for mobile */
+        }
+
+        .trust-section-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        /* Re-order content for a better mobile UX flow */
+        .title { order: 1; }
+        .panel { order: 2; }
+        .cta-row { order: 3; }
+
+        .title {
+            position: relative; /* Reset positioning from desktop */
+            transform: none;
+            left: auto;
+            width: 100%;
+            font-size: 2.25rem; /* ~36px */
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Hide decorative frame on mobile for a cleaner look */
+        .frame-outline { 
+            display: none; 
+        }
+
+        .panel {
+            position: relative; /* Reset positioning */
+            transform: none;
+            left: auto;
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+            border-radius: 20px;
+        }
+
+        /*************************************/
+        /*            >> FIX <<              */
+        /*************************************/
+        .features {
+            position: relative; /* Change from absolute to bring it back into flow */
+            inset: auto; /* Reset the inset property */
+        }
+        
+        .feature-text-box {
+            padding: 2.5rem 1.5rem;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: flex-start; /* Re-aligns items for column layout */
+            justify-content: flex-start; /* Re-aligns items */
+        }
+
+        .f1, .f2, .f3, .f4, .f5 {
+            width: 100%;
+            height: auto;
+        }
+        
+        .feature { 
+            gap: 1rem; /* 16px */
+        }
+
+        .feature .icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background-size: 24px 24px;
+        }
+
+        .feature-content { 
+            flex: 1; /* Allow text to take remaining space */
+        }
+
+        .feature h3 {
+            width: auto;
+            height: auto;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            margin: 0 0 0.5rem 0; /* Add space below heading */
+        }
+
+        .feature p {
+            width: auto;
+            height: auto;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .cta-row {
+            position: relative; /* Reset positioning */
+            transform: none;
+            left: auto;
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem; /* 16px */
+            margin-top: 3rem;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 400px; /* Prevent buttons from being too wide */
+            height: auto;
+            padding: 0.9rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1rem; /* 16px */
+        }
+        
+        .btn.primary {
+            padding: 0.9rem 1.5rem; /* Ensure consistent padding */
+        }
     }
-    .f3{
-      width: 392px;
-      height: 150px;
-    }
-    .f4{
-      width: 392px;
-      height: 150px;
-    }
-    .f5{
-      width: 392px;
-      height: 150px;
-    }
-  </style>
-  """
+</style>
+"""
